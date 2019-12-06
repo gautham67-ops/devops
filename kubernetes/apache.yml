@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apache
+  labels:
+    app: apache
+spec:
+  containers:
+  - image: httpd
+    name: apache
+    ports:
+    - containerPort: 80
+      name: http
+      protocol: TCP
